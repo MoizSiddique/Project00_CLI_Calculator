@@ -2,7 +2,8 @@
   "name": "project00_cli_calculator",
   "version": "1.0.0",
   "description": "A Simple Command LIne InterFace Calculator",
-  "main": "index.js",
+  "main": "./index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/MoizSiddique/Project00_CLI_Calculator/issues"
   },
-  "homepage": "https://github.com/MoizSiddique/Project00_CLI_Calculator#readme"
+  "homepage": "https://github.com/MoizSiddique/Project00_CLI_Calculator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3"
+  }
 }
