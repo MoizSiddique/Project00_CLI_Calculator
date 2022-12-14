@@ -1,3 +1,5 @@
+#! /usr/bin/evn node
+
 import inquirer from "inquirer";
 
 enum Operators {
