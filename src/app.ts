@@ -45,7 +45,7 @@ function calculation(operator:string, operand1:number, operand2:number): void{
         case "multiplication":
             result = operand1 * operand2;
             break;
-        case "Division":
+        case "division":
             result = operand1 / operand2;
             break;
     }
