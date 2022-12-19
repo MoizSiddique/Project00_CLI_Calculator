@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/index.js"
+    "start": "node dist/app.js"
   },
   "bin": {
-    "moiz-project00_cli_calculator" : "bin/index.js"
+    "moizcal" : "dist/app.js"
   },
   "repository": {
     "type": "git",
