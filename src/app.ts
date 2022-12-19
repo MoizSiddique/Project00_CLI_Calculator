@@ -6,7 +6,7 @@ enum Operators {
     Addition = "addition",
     Subtraction = "subtraction",
     Multiplication = "multiplication",
-    Division = "divison"
+    Division = "division"
 }
 
 async function userPrompt() {
