@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 import inquirer from "inquirer";
+import chalk from "chalk";
+import chalkAnimation from 'chalk-animation';
 
 enum Operators {
     Addition = "addition",
@@ -9,7 +11,33 @@ enum Operators {
     Division = "division"
 }
 
+const sleep = ()=>{
+    return new Promise((res)=>{
+        setTimeout(res, 2000);
+    });
+}
+async function startCalculation(){
+    const intro = chalkAnimation.rainbow("Lets start calculation....\n");
+    await sleep();
+    intro.stop();
+    console.log(chalk.green(`     _____________________
+    |  _________________  |
+    | | JO           0. | |
+    | |_________________| |
+    |  ___ ___ ___   ___  |
+    | | 7 | 8 | 9 | | + | |
+    | |___|___|___| |___| |
+    | | 4 | 5 | 6 | | - | |
+    | |___|___|___| |___| |
+    | | 1 | 2 | 3 | | x | |
+    | |___|___|___| |___| |
+    | | . | 0 | = | | / | |
+    | |___|___|___| |___| |
+    |_____________________|\n`))
+}
 async function userPrompt() {
+
+    await startCalculation();
     let operator = await inquirer.prompt([{
         name: "operation",
         type: "list",
@@ -50,7 +78,7 @@ function calculation(operator:string, operand1:number, operand2:number): void{
             break;
     }
 
-    console.log(`The result of ${operator} ${operand1} and ${operand2}: ${result}`);
+    console.log(`\nThe result of ${operator} ${operand1} and ${operand2}: ${chalk.green(result)}`);
 }
 
 userPrompt();
